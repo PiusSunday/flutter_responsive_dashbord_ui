@@ -14,10 +14,13 @@ class ResponsiveDashboardUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'RD UI',
-      home: ResponsiveLayout(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: const ResponsiveLayout(
         mobileScaffold: MobileScaffold(),
         tabletScaffold: TabletScaffold(),
         desktopScaffold: DesktopScaffold(),
